@@ -31,12 +31,6 @@ total_NY_pop <- incarcerations %>%
   filter(year == max(year) & state == "NY") %>%
   summarize(mean = mean(total_pop, na.rm = TRUE)) %>%
   pull(mean)
-  
-# Total Prison Population Rate in New York (2018) 
-total_prison_popRate <- incarcerations %>%
-  filter(year == mean(year) & state == "NY") %>%
-  summarize(mean = mean(total_prison_pop_rate , na.rm = TRUE)) %>%
-  pull(mean)
 
 
 # Population of New York Age 15 - 64
@@ -80,7 +74,7 @@ ny_incarc_black_graph_df <- incarcerations %>%
 
 # Visual for dataset 2
 options(sciepen = 10000)
-ggplot(ny_incarc_black_graph_df, aes(x=year)) + 
+comparison_graph <- ggplot(ny_incarc_black_graph_df, aes(x=year)) + 
   geom_line(aes(y=black_jail_population, col="NY Black Jail Population")) + 
   geom_line(aes(y=total_jail_pop_NY, col="NY Jail Population")) + 
   labs(title="NY Population v. Black Population in Jail ", 
@@ -89,8 +83,7 @@ ggplot(ny_incarc_black_graph_df, aes(x=year)) +
   scale_color_manual(name="", 
                      values = c("blue", "red")) +  # line color
   theme(panel.grid.minor = element_blank())  # turn off minor grid
-
-
+comparison_graph
 #map 
 # data set 
 # New York County 

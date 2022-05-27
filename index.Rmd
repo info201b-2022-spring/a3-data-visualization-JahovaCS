@@ -1,0 +1,77 @@
+---
+title: "Incarcerations"
+name: "James Bang"
+date: '2022-05-20'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("analysis.R")
+source()
+source()
+source()
+
+
+library("knitr")
+
+```
+
+
+## Introduction 
+
+
+
+
+
+
+
+---
+title: "Gas Prices Report"
+author: "Ryan Nguyen, Frank Zheng, James Bang, Hansol Choi"
+date: '2022-05-22'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+source("summary.R")
+source("table.R")
+source("visual1.R")
+source("visual2.R")
+source("visual3.R")
+
+library("knitr")
+```
+
+# Introduction
+
+For our Exploratory assignment, we have decided to look at U.S. city gasoline prices and global gas prices to learn more about our data set. To look further into countries like the U.S., we chose to look more into high income countries to figure our the gas prices in this selected group.
+
+## Summary Information
+
+From our data set on worldwide gas prices USD per liter, we have found it is `r summary_info$avg_gas` per liter. The value for high income price to be `r summary_info$HIC_val` per liter. The number of countries we found to be above the high income price was `r summary_info$num_country` countries. In the U.S., the year for the highest city gasoline price USD per gallon average was `r summary_info$year_highest` and the price was `r summary_info$highest_city_price`.
+
+## Summary Table
+
+```{r}
+worldwide_table
+```
+
+We have created this table to examine the differences in average gas prices per liter among the income countries around the world. Surprisingly we find out that low income countries have higher gas price than lower middle income and upper middle income.
+
+## Chart 1
+```{r}
+Jan_gasincrease
+```
+## Chart 2
+```{r}
+
+```
+## Chart 3
+```{r}
+us_avg_year_gas
+```
+This chart was intended to show the trend of gas pricing over several years. What we can see from the line chart is a general trend of increase of gas pricing, with a large spike around 2010, dipping down before spiking even higher at the most recent date. The current point of gas prices seen from this line chart is the highest pricing that unleaded regular gasoline has ever been.
+
