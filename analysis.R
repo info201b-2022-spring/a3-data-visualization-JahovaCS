@@ -78,11 +78,10 @@ comparison_graph <- ggplot(ny_incarc_black_graph_df, aes(x=year)) +
   geom_line(aes(y=black_jail_population, col="NY Black Jail Population")) + 
   geom_line(aes(y=total_jail_pop_NY, col="NY Jail Population")) + 
   labs(title="NY Population v. Black Population in Jail ", 
-       caption="Population", y="Population") +  # title and caption
-  #scale_x_date(labels = waiver(), breaks = waiver()) +  # change to monthly ticks and labels
+       caption="Population", y="Population") +  # title and caption 
   scale_color_manual(name="", 
                      values = c("blue", "red")) +  # line color
-  theme(panel.grid.minor = element_blank())  # turn off minor grid
+  theme(panel.grid.minor = element_blank())  
 comparison_graph
 #map 
 # data set 

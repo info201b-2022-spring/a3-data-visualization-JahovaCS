@@ -6,72 +6,35 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 source("analysis.R")
-source()
-source()
-source()
-
 
 library("knitr")
-
 ```
 
 
 ## Introduction 
 
+For this assignment, I chose to focus mainly on the crime rates in NY, specifically towards Black Americans. I had decided to analyze this group of people because of the stigmatizations towards Black Americans and wanted to see for myself, using data provided by Vera, the jail population specific to NY. I chose to analyze the population of New York for proportionality, the rate of jail specific to Black Americans, the county in New York, and the population of New York aged 15 - 64 to combat the stigmatizations towards Black Americans. 
 
 
 
-
-
-
----
-title: "Gas Prices Report"
-author: "Ryan Nguyen, Frank Zheng, James Bang, Hansol Choi"
-date: '2022-05-22'
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
-source("summary.R")
-source("table.R")
-source("visual1.R")
-source("visual2.R")
-source("visual3.R")
-
-library("knitr")
-```
-
-# Introduction
-
-For our Exploratory assignment, we have decided to look at U.S. city gasoline prices and global gas prices to learn more about our data set. To look further into countries like the U.S., we chose to look more into high income countries to figure our the gas prices in this selected group.
-
-## Summary Information
-
-From our data set on worldwide gas prices USD per liter, we have found it is `r summary_info$avg_gas` per liter. The value for high income price to be `r summary_info$HIC_val` per liter. The number of countries we found to be above the high income price was `r summary_info$num_country` countries. In the U.S., the year for the highest city gasoline price USD per gallon average was `r summary_info$year_highest` and the price was `r summary_info$highest_city_price`.
-
-## Summary Table
-
+## Visualization 1
 ```{r}
-worldwide_table
+NY_population_graph
 ```
+I created this chart to illustrate how the population of New York has changed over the 40 years. Although we do see a slight dip in the 80's, we see an exponential rise in the following years, making note of how the population of New York has exponentially increased since the 1900's. I created this graph to show how the population in New York has increased exponentially; resulting in a possible environment more susceptible to crime. 
 
-We have created this table to examine the differences in average gas prices per liter among the income countries around the world. Surprisingly we find out that low income countries have higher gas price than lower middle income and upper middle income.
 
-## Chart 1
+## Visualization 2
 ```{r}
-Jan_gasincrease
+comparison_graph
 ```
-## Chart 2
-```{r}
+My second graph shows the comparisons of Black Jail Population in relationship to the population of all the other races. We see that the first 10-15 years of data are missing but from 1983, we see data showing us that the crime rate of Black Americans is close to a third of the total Jail population, debunking the misconception of Black Americans making up the majority of the crime rates in New York.
 
+## Visualization 3
+```{r} 
+ny_map_visualization
 ```
-## Chart 3
-```{r}
-us_avg_year_gas
-```
-This chart was intended to show the trend of gas pricing over several years. What we can see from the line chart is a general trend of increase of gas pricing, with a large spike around 2010, dipping down before spiking even higher at the most recent date. The current point of gas prices seen from this line chart is the highest pricing that unleaded regular gasoline has ever been.
 
+The final visualization shows a map of New York, and the population of jailed Black Americans. The color coordinated map shows us that Black Americans make up the lower 25%, with crime rates spiking in the Chenango County in New York. 
